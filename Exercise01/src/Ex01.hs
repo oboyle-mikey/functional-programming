@@ -1,6 +1,7 @@
 {- butrfeld Andrew Butterfield -}
 module Ex01 where
 import Data.List ((\\))
+import Data.Maybe
 
 -- Datatypes -------------------------------------------------------------------
 
@@ -39,7 +40,15 @@ type EDict = Dict String Double
   -- (2) the expression contains a variable not in the dictionary.
 
 eval :: EDict -> Expr -> Maybe Double
-eval d e = Just 1e-98
+eval [] (Val x) = Just x
+eval d (Var i) = fromJust(find d i)
+
+
+
+
+
+
+
 
 -- Part 2 : Simplifying Expressions -- (57 marks) ------------------------------
 
