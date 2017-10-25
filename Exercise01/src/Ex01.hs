@@ -41,7 +41,7 @@ type EDict = Dict String Double
 
 eval :: EDict -> Expr -> Maybe Double
 eval [] (Val x) = Just x
-eval d (Var i) = fromJust(find d i)
+
 
 
 
