@@ -40,7 +40,28 @@ type EDict = Dict String Double
   -- (2) the expression contains a variable not in the dictionary.
 
 eval :: EDict -> Expr -> Maybe Double
-eval [] (Val x) = Just x
+eval _ (Val x) = Just x
+eval d (Val x) = Just x
+eval _ (Var i) = Nothing
+eval d (Var i) = find d i
+
+eval d (Add (Val e1) (Val e2)) = eval e1 + eval e2
+eval d (Mul (Val e1) (Val e2)) = eval e1 + eval e2
+eval d (Sub (Val e1) (Val e2)) = eval e1 - eval e2
+eval d (Dvd (Val e1) 0) = Nothing
+eval d (Dvd (Val e1) (Val e2)) = eval e1 / eval e2
+
+
+
+
+
+
+
+
+
+			   
+			   
+
 
 
 
@@ -67,7 +88,7 @@ simp _ e = e  -- simplest case, Val, needs no special treatment
 
   -- (1) see test scripts for most required properties
   -- (2) (Def v e1 e2) should simplify to e2,...
-    -- (2a) .... if there is mention of v in e2
+    -- (2a) .... if there is no  mention of v in e2
     -- (2b) .... or any mention of v in e2 is inside another (Def v .. ..)
 
 simpVar :: EDict -> Id -> Expr
