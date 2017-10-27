@@ -66,7 +66,10 @@ eval d (Dvd x y)
      -> if n==0.0 then Nothing else Just (m/n)
    _ -> Nothing
 
-
+eval d (Def x e1 e2)
+ =case (eval d e1) of
+  Nothing -> Nothing
+  Just v1 -> eval (define d x v1) e2
 
 
 
