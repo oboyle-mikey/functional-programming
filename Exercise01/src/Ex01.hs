@@ -42,16 +42,29 @@ type EDict = Dict String Double
 eval :: EDict -> Expr -> Maybe Double
 eval _ (Val x) = Just x
 eval d (Val x) = Just x
-eval _ (Var i) = Nothing
 eval d (Var i) = find d i
+eval _ (Var i) = Nothing
 
-eval d (Add (Val e1) (Val e2)) = eval e1 + eval e2
-eval d (Mul (Val e1) (Val e2)) = eval e1 + eval e2
-eval d (Sub (Val e1) (Val e2)) = eval e1 - eval e2
-eval d (Dvd (Val e1) 0) = Nothing
-eval d (Dvd (Val e1) (Val e2)) = eval e1 / eval e2
+eval d (Mul x y)
+ =case (eval d x, eval d y) of
+   (Just m , Just n) -> Just (m*n)
+   _                 -> Nothing
 
+eval d (Add x y)
+ =case (eval d x, eval d y) of
+   (Just m , Just n) -> Just (m+n)
+   _                 -> Nothing
 
+eval d (Sub x y)
+ =case (eval d x, eval d y) of
+   (Just m , Just n) -> Just (m-n)
+   _                 -> Nothing
+
+eval d (Dvd x y)
+ =case (eval d x, eval d y) of
+   (Just m, Just n)
+     -> if n==0.0 then Nothing else Just (m/n)
+   _ -> Nothing
 
 
 
