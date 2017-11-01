@@ -72,21 +72,6 @@ eval d (Def x e1 e2)
   Just v1 -> eval (define d x v1) e2
 
 
-
-
-
-			   
-			   
-
-
-
-
-
-
-
-
-
-
 -- Part 2 : Simplifying Expressions -- (57 marks) ------------------------------
 
 -- Given the following code :
@@ -108,7 +93,10 @@ simp _ e = e  -- simplest case, Val, needs no special treatment
     -- (2b) .... or any mention of v in e2 is inside another (Def v .. ..)
 
 simpVar :: EDict -> Id -> Expr
-simpVar d v = (Val 1e-99)
+simpVar d v = case find d v of
+ Nothing -> Var v
+ Just a -> Val a
+
 
 simpAdd :: EDict -> Expr -> Expr -> Expr
 simpAdd d e1 e2 = (Val 1e-99)
