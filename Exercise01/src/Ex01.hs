@@ -97,9 +97,11 @@ simpVar d v = case find d v of
  Nothing -> Var v
  Just a -> Val a
 
-
 simpAdd :: EDict -> Expr -> Expr -> Expr
-simpAdd d e1 e2 = (Val 1e-99)
+simpAdd d (Val a) (Val b) = Val(a+b)
+simpAdd d (Val a) e2      = e2
+simpAdd d e1 (Val b)      = e1
+simpAdd d e1 e2           = Add e1 e2
 
 simpSub :: EDict -> Expr -> Expr -> Expr
 simpSub d e1 e2 = (Val 1e-99)
