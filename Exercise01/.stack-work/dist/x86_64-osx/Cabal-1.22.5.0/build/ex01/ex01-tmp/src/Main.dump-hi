@@ -1,9 +1,9 @@
 
 ==================== FINAL INTERFACE ====================
-2017-10-26 16:20:04.78091 UTC
+2017-11-01 19:16:16.311805 UTC
 
 interface main@main:Main 7103
-  interface hash: a022fe3fd07f282d814f7d6ecf3f65cb
+  interface hash: e10613f1c4f3aeef3ea8312ef002fc48
   ABI hash: 59f646d590648bca11ed8cd6ef62e56b
   export-list hash: 1f196230d46b142ebbd063e2f9b9ee1f
   orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
@@ -22,7 +22,7 @@ family instance modules: base-4.8.2.0:Control.Applicative
                          base-4.8.2.0:Data.Type.Equality base-4.8.2.0:GHC.Generics
 import  -/  base-4.8.2.0:Prelude 694dcaf039efe62df1c44834e2dbd2fb
 import  -/  base-4.8.2.0:System.IO 0899686bfc1d9ef72dff3de85e99862a
-import  -/  Ex01 1ca7c5f25420918d588ff121f63dd8c5
+import  -/  Ex01 d4399ec5a8eeda32e8f8d2dd2b95c185
   exports: 960bce9cb83a757424eeb4dd5144f6b9
 5a00e31185a434bcb7cbf3a804e7752a
   main :: GHC.Types.IO ()

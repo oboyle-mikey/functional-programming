@@ -93,27 +93,38 @@ simp _ e = e  -- simplest case, Val, needs no special treatment
     -- (2b) .... or any mention of v in e2 is inside another (Def v .. ..)
 
 simpVar :: EDict -> Id -> Expr
-simpVar d v = case find d v of
- Nothing -> Var v
+simpVar d i = case find d i of
+ Nothing -> Var i
  Just a -> Val a
 
 simpAdd :: EDict -> Expr -> Expr -> Expr
-simpAdd d (Val a) (Val b) = Val(a+b)
-simpAdd d (Val 0) e2      = e2
-simpAdd d e1 (Val 0)      = e1
-simpAdd d e1 e2           = Add e1 e2
+simpAdd d e1 e2 = case (eval d e1, eval d e2) of
+ (Just 0.0, _) -> e2
+ (_, Just 0.0) -> e1
+ (Just m, Just n) -> Val(m+n)
+ (_,_) -> Add e1 e2
 
 simpSub :: EDict -> Expr -> Expr -> Expr
-simpSub d (Val a) (Val b) = Val(a-b)
-simpSub d e1 (Val 0)      = e1
-simpSub d (Val 0) e2      = Mul e2 (Val -1)
-simpSub d e1 e2           = Sub e1 e2
+simpSub d e1 e2 = case (eval d e1, eval d e2) of
+ (_, Just 0.0) -> e1
+ (Just m, Just n) -> Val(m-n)
+ (_,_) -> Sub e1 e2
 
-simpMul :: EDict -> Expr -> Expr -> Expr
-simpMul d e1 e2 = (Val 1e-99)
+simpMul :: EDict ->Expr -> Expr -> Expr
+simpMul d e1 e2 = case (eval d e1, eval d e2) of
+ (Just 0.0, _) -> Val 0.0
+ (_, Just 0.0) -> Val 0.0
+ (Just m, Just n) -> Val(m*n)
+ (_,_) -> Mul e1 e2
+ 
 
 simpDvd :: EDict -> Expr -> Expr -> Expr
-simpDvd d e1 e2 = (Val 1e-99)
+simpDvd d e1 e2 = case (eval d e1, eval d e2) of
+ (_, Just 0.0) -> Dvd e1 (Val 0.0)
+ (Just 0.0, _) -> Val 0.0
+ (Just m, Just n) -> Val(m/n)
+ (_,_) -> Dvd e1 e2
 
 simpDef :: EDict -> Id -> Expr -> Expr -> Expr
-simpDef d v e1 e2 = (Val 1e-99)
+simpDef d v (Val x) e2 = simp (define d v x) e2
+simpDef d v e1 e2 = Def v e1 e2
