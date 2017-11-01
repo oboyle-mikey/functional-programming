@@ -99,12 +99,15 @@ simpVar d v = case find d v of
 
 simpAdd :: EDict -> Expr -> Expr -> Expr
 simpAdd d (Val a) (Val b) = Val(a+b)
-simpAdd d (Val a) e2      = e2
-simpAdd d e1 (Val b)      = e1
+simpAdd d (Val 0) e2      = e2
+simpAdd d e1 (Val 0)      = e1
 simpAdd d e1 e2           = Add e1 e2
 
 simpSub :: EDict -> Expr -> Expr -> Expr
-simpSub d e1 e2 = (Val 1e-99)
+simpSub d (Val a) (Val b) = Val(a-b)
+simpSub d e1 (Val 0)      = e1
+simpSub d (Val 0) e2      = Mul e2 (Val -1)
+simpSub d e1 e2           = Sub e1 e2
 
 simpMul :: EDict -> Expr -> Expr -> Expr
 simpMul d e1 e2 = (Val 1e-99)
