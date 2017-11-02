@@ -1,4 +1,4 @@
-{- butrfeld Andrew Butterfield -}
+{- oboylemi Michael O'Boyle -}
 module Ex01 where
 import Data.List ((\\))
 import Data.Maybe
@@ -110,18 +110,27 @@ simpSub d e1 e2 = case (eval d e1, eval d e2) of
  (Just m, Just n) -> Val(m-n)
  (_,_) -> Sub e1 e2
 
-simpMul :: EDict ->Expr -> Expr -> Expr
-simpMul d e1 e2 = case (eval d e1, eval d e2) of
- (Just 0.0, _) -> Val 0.0
- (_, Just 0.0) -> Val 0.0
- (Just m, Just n) -> Val(m*n)
- (_,_) -> Mul e1 e2
+
+
+simpMul :: EDict -> Expr -> Expr -> Expr
+simpMul d e1 e2
+ = let
+  i = simp d e1
+  j = simp d e2
+ in case (i, j) of
+  (e, Val 1.0) -> e
+  (Val 1.0, e) -> e
+  (_, Val 0.0) -> Val 0.0
+  (Val 0.0, _) -> Val 0.0
+  (Val i,Val j) -> Val(i*j)
+  
  
 
 simpDvd :: EDict -> Expr -> Expr -> Expr
 simpDvd d e1 e2 = case (eval d e1, eval d e2) of
  (_, Just 0.0) -> Dvd e1 (Val 0.0)
  (Just 0.0, _) -> Val 0.0
+ (Just m, Just 1.0) -> Val m 
  (Just m, Just n) -> Val(m/n)
  (_,_) -> Dvd e1 e2
 
