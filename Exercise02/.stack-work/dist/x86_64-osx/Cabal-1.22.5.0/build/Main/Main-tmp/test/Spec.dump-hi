@@ -1,10 +1,10 @@
 
 ==================== FINAL INTERFACE ====================
-2017-11-28 14:30:20.60735 UTC
+2017-12-04 15:05:24.114543 UTC
 
 interface main@main:Main 7103
-  interface hash: 3a5979c2373d05b6edefad23dfaf8fdb
-  ABI hash: 0e702e9c449bf9595c4caa3bb2376376
+  interface hash: 52a8fd61b37cb26da51b44852e011789
+  ABI hash: 4ecd5b69a4f9693bec87aa805a536892
   export-list hash: fbe7641fb70fa80416e3f877c2df7b64
   orphan hash: 775b18ac555caefc91b4e998307757a1
   flag hash: 350da3bfc48e832214a6a3c35fb35a3e
@@ -63,7 +63,7 @@ import  -/  HUnit-1.3.1.2@HUnit_AzBU5jSVcUy6oxicItOe0b:Test.HUnit 66bcf89478e54c
 import  -/  HUnit-1.3.1.2@HUnit_AzBU5jSVcUy6oxicItOe0b:Test.HUnit.Base 338a93e2b392577430f4015808c86c09
 import  -/  base-4.8.2.0:GHC.Base 1db77db5dae73d8c424c85b09fbadb89
 import  -/  base-4.8.2.0:Prelude 694dcaf039efe62df1c44834e2dbd2fb
-import  -/  Ex02 73be4e039ebaad896cb810c9474bbdc2
+import  -/  Ex02 3e4c58923e9a465b95a9f8dca7a821ed
   exports: c4c1c7cc812fc46fbc993ef083d2484b
   A a640c871f92a5303ff0423a31fd18a6e
   B 3384416a33de37cdaa934c1bf49fb67f
@@ -71,7 +71,7 @@ import  -/  Ex02 73be4e039ebaad896cb810c9474bbdc2
   IntFun 6cee3f62aae02fad1d513fb3f971f6a5
   getsumsandlength b6e21bbd5995cfca9823cd0e3e7f2fe7
   ins 4d54a9640f8dc4e4f2ad3c708f3626b6
-  lkp 57e5d90f07070fb6b543c8469607ff9a
+  lkp 8b7ab5c654d59093569a485af04e49d5
 import  -/  test-framework-0.8.1.1@testf_B1MVPJUrcmB7HNAGf4Uv93:Test.Framework f67b2d8241bfa35267aad2e4a4b76ee9
 import  -/  test-framework-0.8.1.1@testf_B1MVPJUrcmB7HNAGf4Uv93:Test.Framework.Core f433b65c2544657a20d68fe310c8026a
 import  -/  test-framework-0.8.1.1@testf_B1MVPJUrcmB7HNAGf4Uv93:Test.Framework.Runners.Console a28542c59ee3219b6b399e1f9a2c960c
@@ -1449,20 +1449,20 @@ f11a7b65058e0aab680d5dcc827e5ef6
 271ebb20dd5b9d770bd0e18140c909a6
   insertTests99 :: GHC.Stack.CallStack
   {- Unfolding: (GHC.Stack.CallStack Main.insertTests100) -}
-601bd84e19b8153723a152ad05a17b68
+360015d7d825b4bce5563aea6720bca2
   lookupTests :: Test.Framework.Core.Test
   {- Strictness: m2,
      Unfolding: (Test.Framework.Core.TestGroup
                    Main.lookupTests138
                    Main.lookupTests1) -}
-a09028aa986e21974aac5f214195bcf3
+47a27be8c05044439e70285d2c0ff671
   lookupTests1 :: [Test.Framework.Core.Test]
   {- Strictness: m2,
      Unfolding: (GHC.Types.:
                    @ Test.Framework.Core.Test
                    Main.lookupTests129
                    Main.lookupTests2) -}
-34d4d84b3dc76856918fd71960a06b4c
+1958117843757218c7c083407886c8a8
   lookupTests10 :: [Test.Framework.Core.Test]
   {- Strictness: m2,
      Unfolding: (GHC.Types.:
@@ -1473,7 +1473,7 @@ f8cd976d34ea9e82755dcf0ee1be70e4
   lookupTests100 :: [GHC.Types.Char]
   {- Unfolding: (GHC.CString.unpackCString#
                    "3 in B 3 300 (Maybe)){3 marks}"#) -}
-42d8f984d03fc81fb0725cdbb7a218ca
+9d16184a705e78185a589e67228f6541
   lookupTests101 :: Test.Framework.Core.Test
   {- Unfolding: (Test.Framework.Core.Test
                    @ Test.Framework.Providers.HUnit.TestCaseRunning
@@ -1490,7 +1490,7 @@ f8cd976d34ea9e82755dcf0ee1be70e4
                    (Trans
                         (Sym (GHC.Types.NTCo:IO[0] <()>_R))
                         (Sym (Test.Framework.Providers.HUnit.NTCo:TestCase[0])))) -}
-c53dbf84b72f75930679b394a3c7561a
+c7b69a250c6eb185b96cc75332ab2a14
   lookupTests102 ::
     GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
@@ -1506,7 +1506,7 @@ c53dbf84b72f75930679b394a3c7561a
                    Main.$s$fShow[]
                    (GHC.Types.[] @ GHC.Types.Char)
                    (GHC.Types.[] @ GHC.Integer.Type.Integer)
-                   (Ex02.lkp1 @ GHC.Integer.Type.Integer @ [])
+                   (GHC.Types.[] @ GHC.Integer.Type.Integer)
                    eta2) -}
 4fee208e0d60edcfe0185921224a494b
   lookupTests103 :: GHC.Stack.CallStack
@@ -1543,14 +1543,14 @@ e2218810cbf4002e758d33971242f550
   lookupTests109 :: [GHC.Types.Char]
   {- Unfolding: (GHC.CString.unpackCString#
                    "3 in B 5 500 ([])){3 marks}"#) -}
-0646092b15f1e1eadbf2622700e5fe75
+76269bf8504baa8980eae17238735b91
   lookupTests11 :: [Test.Framework.Core.Test]
   {- Strictness: m2,
      Unfolding: (GHC.Types.:
                    @ Test.Framework.Core.Test
                    Main.lookupTests33
                    Main.lookupTests12) -}
-673e5c4d7cab668a99a3acdaa24e9d90
+2bb17a6419d1f0b1251d5ce229403673
   lookupTests110 :: Test.Framework.Core.Test
   {- Unfolding: (Test.Framework.Core.Test
                    @ Test.Framework.Providers.HUnit.TestCaseRunning
@@ -1567,7 +1567,7 @@ e2218810cbf4002e758d33971242f550
                    (Trans
                         (Sym (GHC.Types.NTCo:IO[0] <()>_R))
                         (Sym (Test.Framework.Providers.HUnit.NTCo:TestCase[0])))) -}
-5ed74454be0bcdbc99788a5c15f292f2
+39a566723a2a3ef8772fbc7685814b08
   lookupTests111 ::
     GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
@@ -1583,7 +1583,7 @@ e2218810cbf4002e758d33971242f550
                    Main.$s$fShowMaybe
                    (GHC.Types.[] @ GHC.Types.Char)
                    (GHC.Base.Nothing @ GHC.Integer.Type.Integer)
-                   (Ex02.lkp1 @ GHC.Integer.Type.Integer @ GHC.Base.Maybe)
+                   (GHC.Base.Nothing @ GHC.Integer.Type.Integer)
                    eta2) -}
 71d9b9964650c628e24fc6940c25d439
   lookupTests112 :: GHC.Stack.CallStack
@@ -1620,7 +1620,7 @@ a6cfabcb7ce2a4b731b2158767445c2c
   lookupTests118 :: [GHC.Types.Char]
   {- Unfolding: (GHC.CString.unpackCString#
                    "3 in B 5 500 (Maybe)){3 marks}"#) -}
-8816bfc591064ae691a09ec328b93319
+4cc1df0a6ef467f6eceb5b597978c3fd
   lookupTests119 :: Test.Framework.Core.Test
   {- Unfolding: (Test.Framework.Core.Test
                    @ Test.Framework.Providers.HUnit.TestCaseRunning
@@ -1637,14 +1637,14 @@ a6cfabcb7ce2a4b731b2158767445c2c
                    (Trans
                         (Sym (GHC.Types.NTCo:IO[0] <()>_R))
                         (Sym (Test.Framework.Providers.HUnit.NTCo:TestCase[0])))) -}
-008ff47c9b12078459bc42f8be732f95
+9224f86cd3183abaf859f8a59286486b
   lookupTests12 :: [Test.Framework.Core.Test]
   {- Strictness: m2,
      Unfolding: (GHC.Types.:
                    @ Test.Framework.Core.Test
                    Main.lookupTests24
                    Main.lookupTests13) -}
-a48e76be91945f41f18915d40076eabf
+d06561ce54465445198e8cbd345a881a
   lookupTests120 ::
     GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
@@ -1660,7 +1660,7 @@ a48e76be91945f41f18915d40076eabf
                    GHC.Show.$fShow[]_$s$fShow[]
                    (GHC.Types.[] @ GHC.Types.Char)
                    (GHC.Types.[] @ GHC.Types.Int)
-                   (Ex02.lkp1 @ GHC.Types.Int @ [])
+                   (GHC.Types.[] @ GHC.Types.Int)
                    eta2) -}
 4963a9b79421b9d2423d7190c43e6ba5
   lookupTests121 :: GHC.Stack.CallStack
@@ -1700,7 +1700,7 @@ a852eab4c670ba1abe97c1d62f8af735
   lookupTests128 :: [GHC.Types.Char]
   {- Unfolding: (GHC.CString.unpackCString#
                    "3 in C ? ([]){3 marks}"#) -}
-b992a3f57de9472d26a71e0b31b0f608
+1f0f95055a1f0b1b1d85e12765a77e5e
   lookupTests129 :: Test.Framework.Core.Test
   {- Unfolding: (Test.Framework.Core.Test
                    @ Test.Framework.Providers.HUnit.TestCaseRunning
@@ -1717,14 +1717,14 @@ b992a3f57de9472d26a71e0b31b0f608
                    (Trans
                         (Sym (GHC.Types.NTCo:IO[0] <()>_R))
                         (Sym (Test.Framework.Providers.HUnit.NTCo:TestCase[0])))) -}
-8ab14a4cd3aa305e67f2c8b4a3393056
+3da0d765eca71693b89ab2eaf8c0a771
   lookupTests13 :: [Test.Framework.Core.Test]
   {- Strictness: m2,
      Unfolding: (GHC.Types.:
                    @ Test.Framework.Core.Test
                    Main.lookupTests14
                    (GHC.Types.[] @ Test.Framework.Core.Test)) -}
-f5dfe0ecb13d7a5d16d8cf0836f3d78e
+3a382b47b9b33313ecef477708291612
   lookupTests130 ::
     GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
@@ -1740,7 +1740,7 @@ f5dfe0ecb13d7a5d16d8cf0836f3d78e
                    Main.$s$fShowMaybe2
                    (GHC.Types.[] @ GHC.Types.Char)
                    (GHC.Base.Nothing @ GHC.Types.Int)
-                   (Ex02.lkp1 @ GHC.Types.Int @ GHC.Base.Maybe)
+                   (GHC.Base.Nothing @ GHC.Types.Int)
                    eta2) -}
 56e4e0605e48c3130f0d710edd3e7d31
   lookupTests131 :: GHC.Stack.CallStack
@@ -1782,7 +1782,7 @@ b686bd76b64d8232945892550638c7bd
   {- Unfolding: (GHC.CString.unpackCString#
                    "\n\
                    \Part 2 - lookup (40 marks)\n"#) -}
-5029579da3b0515e961a4908314c1119
+a4f8710fca7d1be41a4a0ef4ecb738c8
   lookupTests14 :: Test.Framework.Core.Test
   {- Unfolding: (Test.Framework.Core.Test
                    @ Test.Framework.Providers.HUnit.TestCaseRunning
@@ -1799,7 +1799,7 @@ b686bd76b64d8232945892550638c7bd
                    (Trans
                         (Sym (GHC.Types.NTCo:IO[0] <()>_R))
                         (Sym (Test.Framework.Providers.HUnit.NTCo:TestCase[0])))) -}
-bab5dd00783a05f2d2d72e0b36263157
+a664f0599de2bdde2e0ab46498f4084a
   lookupTests15 ::
     GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
@@ -1815,7 +1815,7 @@ bab5dd00783a05f2d2d72e0b36263157
                    Main.$s$fShow[]
                    (GHC.Types.[] @ GHC.Types.Char)
                    (GHC.Types.[] @ GHC.Integer.Type.Integer)
-                   (Ex02.lkp1 @ GHC.Integer.Type.Integer @ [])
+                   (GHC.Types.[] @ GHC.Integer.Type.Integer)
                    eta2) -}
 ba0682c50fefafac8056cebff12fcd3f
   lookupTests16 :: GHC.Stack.CallStack
@@ -1835,7 +1835,7 @@ f8578cdd0dfaad9867dff54555cb48da
 f6b3e5e22b9da76f366cbfa924542d2c
   lookupTests19 :: ([GHC.Types.Char], GHC.SrcLoc.SrcLoc)
   {- Unfolding: ((Main.insertTests36, Main.lookupTests20)) -}
-170f6343d02e50ba35735eb399f2c5c8
+6ae3d7bd5a431adbbafb7dedbecd68c8
   lookupTests2 :: [Test.Framework.Core.Test]
   {- Strictness: m2,
      Unfolding: (GHC.Types.:
@@ -1862,7 +1862,7 @@ d7735dedfff9fb38b29d8041ebc07321
   lookupTests23 :: [GHC.Types.Char]
   {- Unfolding: (GHC.CString.unpackCString#
                    "8 in A (B 3 300) (B 7 700) 5 500 ([])){3 marks}"#) -}
-2710b342a4cc9a93276ac6f746e0a914
+6eee04eaece1f1a1b7cda8876c46e595
   lookupTests24 :: Test.Framework.Core.Test
   {- Unfolding: (Test.Framework.Core.Test
                    @ Test.Framework.Providers.HUnit.TestCaseRunning
@@ -1879,7 +1879,7 @@ d7735dedfff9fb38b29d8041ebc07321
                    (Trans
                         (Sym (GHC.Types.NTCo:IO[0] <()>_R))
                         (Sym (Test.Framework.Providers.HUnit.NTCo:TestCase[0])))) -}
-c66e2988cb38190cdfb8e6780e7a0847
+f3796137dbc7bdabe1962b620e28e52a
   lookupTests25 ::
     GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
@@ -1895,7 +1895,7 @@ c66e2988cb38190cdfb8e6780e7a0847
                    Main.$s$fShowMaybe
                    (GHC.Types.[] @ GHC.Types.Char)
                    (GHC.Base.Nothing @ GHC.Integer.Type.Integer)
-                   (Ex02.lkp1 @ GHC.Integer.Type.Integer @ GHC.Base.Maybe)
+                   (GHC.Base.Nothing @ GHC.Integer.Type.Integer)
                    eta2) -}
 ba1584c626f21ddc8bfbe43b90b268b9
   lookupTests26 :: GHC.Stack.CallStack
@@ -1915,7 +1915,7 @@ ba1584c626f21ddc8bfbe43b90b268b9
 24608875932f163ca8c9739d3750fc6f
   lookupTests29 :: ([GHC.Types.Char], GHC.SrcLoc.SrcLoc)
   {- Unfolding: ((Main.insertTests36, Main.lookupTests30)) -}
-c70ed943058cad6753161f1df8342656
+d2130d1a1a8a378bb5766b71ffa06243
   lookupTests3 :: [Test.Framework.Core.Test]
   {- Strictness: m2,
      Unfolding: (GHC.Types.:
@@ -1939,7 +1939,7 @@ d60e878c7fdd10e36751bfdc6dbd9f31
   lookupTests32 :: [GHC.Types.Char]
   {- Unfolding: (GHC.CString.unpackCString#
                    "6 in A (B 3 300) (B 7 700) 5 500 (Maybe)){3 marks}"#) -}
-9e51bf09cc0cdca0c10a26c7affd5c58
+4117f670c191b8a6b916f9e50948bdfa
   lookupTests33 :: Test.Framework.Core.Test
   {- Unfolding: (Test.Framework.Core.Test
                    @ Test.Framework.Providers.HUnit.TestCaseRunning
@@ -1956,7 +1956,7 @@ d60e878c7fdd10e36751bfdc6dbd9f31
                    (Trans
                         (Sym (GHC.Types.NTCo:IO[0] <()>_R))
                         (Sym (Test.Framework.Providers.HUnit.NTCo:TestCase[0])))) -}
-0a67d8ec337676c886a91d9ddbaae88f
+4ba58a5c5411f26dd42e1dd0adbbebcf
   lookupTests34 ::
     GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
@@ -1972,7 +1972,7 @@ d60e878c7fdd10e36751bfdc6dbd9f31
                    Main.$s$fShow[]
                    (GHC.Types.[] @ GHC.Types.Char)
                    (GHC.Types.[] @ GHC.Integer.Type.Integer)
-                   (Ex02.lkp1 @ GHC.Integer.Type.Integer @ [])
+                   (GHC.Types.[] @ GHC.Integer.Type.Integer)
                    eta2) -}
 682289e37b494fbf82d95e04bee9b306
   lookupTests35 :: GHC.Stack.CallStack
@@ -2002,7 +2002,7 @@ f133252ee9e6fee2a3d4b2ec22c80eeb
                    Main.lookupTests21
                    Main.lookupTests40
                    Main.insertTests31) -}
-08919379cd6479edd1a0b78eaa751f42
+2e88caab7cfb1240a5b89d66b2de68f8
   lookupTests4 :: [Test.Framework.Core.Test]
   {- Strictness: m2,
      Unfolding: (GHC.Types.:
@@ -2016,7 +2016,7 @@ f133252ee9e6fee2a3d4b2ec22c80eeb
   lookupTests41 :: [GHC.Types.Char]
   {- Unfolding: (GHC.CString.unpackCString#
                    "4 in A (B 3 300) (B 7 700) 5 500 ([])){3 marks}"#) -}
-e414d94a3d22cc964645c462e0b1d864
+02486a637bd29c547f6d84a0fc2edfc8
   lookupTests42 :: Test.Framework.Core.Test
   {- Unfolding: (Test.Framework.Core.Test
                    @ Test.Framework.Providers.HUnit.TestCaseRunning
@@ -2033,7 +2033,7 @@ e414d94a3d22cc964645c462e0b1d864
                    (Trans
                         (Sym (GHC.Types.NTCo:IO[0] <()>_R))
                         (Sym (Test.Framework.Providers.HUnit.NTCo:TestCase[0])))) -}
-28d9eb745f2d21242bce9cea95b510aa
+9ce5fb320abf271b0de302b86bf7fda2
   lookupTests43 ::
     GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
@@ -2049,7 +2049,7 @@ e414d94a3d22cc964645c462e0b1d864
                    Main.$s$fShowMaybe
                    (GHC.Types.[] @ GHC.Types.Char)
                    (GHC.Base.Nothing @ GHC.Integer.Type.Integer)
-                   (Ex02.lkp1 @ GHC.Integer.Type.Integer @ GHC.Base.Maybe)
+                   (GHC.Base.Nothing @ GHC.Integer.Type.Integer)
                    eta2) -}
 3a4497f0b42f805fa91231865206fa28
   lookupTests44 :: GHC.Stack.CallStack
@@ -2082,7 +2082,7 @@ d4331e128601dc0be104e4cbd7c1015f
 891193d844ea53125cf9339c23f63382
   lookupTests49 :: GHC.Types.Int
   {- HasNoCafRefs, Unfolding: (GHC.Types.I# 82) -}
-363d2c7e671284d3e0a14c0c9815c07a
+0a34baccdd1152716e40ae7cf7e5c9ed
   lookupTests5 :: [Test.Framework.Core.Test]
   {- Strictness: m2,
      Unfolding: (GHC.Types.:
@@ -2093,7 +2093,7 @@ d4331e128601dc0be104e4cbd7c1015f
   lookupTests50 :: [GHC.Types.Char]
   {- Unfolding: (GHC.CString.unpackCString#
                    "1 in A (B 3 300) (B 7 700) 5 500 (Maybe)){3 marks}"#) -}
-0a8a3093392bc8570f65e7dcd74bf674
+6af36045b09692176e8fa780cf9cdb69
   lookupTests51 :: Test.Framework.Core.Test
   {- Unfolding: (Test.Framework.Core.Test
                    @ Test.Framework.Providers.HUnit.TestCaseRunning
@@ -2110,7 +2110,7 @@ d4331e128601dc0be104e4cbd7c1015f
                    (Trans
                         (Sym (GHC.Types.NTCo:IO[0] <()>_R))
                         (Sym (Test.Framework.Providers.HUnit.NTCo:TestCase[0])))) -}
-23e0cccef5f82ea3173e7e10adc996e1
+abb4bbef52cd535f25ce2186e871cfee
   lookupTests52 ::
     GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
@@ -2126,7 +2126,7 @@ d4331e128601dc0be104e4cbd7c1015f
                    Main.$s$fShow[]
                    (GHC.Types.[] @ GHC.Types.Char)
                    Main.lookupTests53
-                   (Ex02.lkp1 @ GHC.Integer.Type.Integer @ [])
+                   Main.lookupTests53
                    eta2) -}
 e5db24c7c75539a42cb5a32ad5c600ae
   lookupTests53 :: [GHC.Integer.Type.Integer]
@@ -2166,7 +2166,7 @@ dc14e63a34597211e451a7fc3886cf4d
 74e808db39deb6723b3d6245fae9fa99
   lookupTests59 :: GHC.Types.Int
   {- HasNoCafRefs, Unfolding: (GHC.Types.I# 80) -}
-269d5950b6287e9609ac142a5a3a350b
+d16b2d8771135b3b0dd3f7cd41dc6f8e
   lookupTests6 :: [Test.Framework.Core.Test]
   {- Strictness: m2,
      Unfolding: (GHC.Types.:
@@ -2177,7 +2177,7 @@ dc14e63a34597211e451a7fc3886cf4d
   lookupTests60 :: [GHC.Types.Char]
   {- Unfolding: (GHC.CString.unpackCString#
                    "5 in A (B 3 300) (B 7 700) 5 500 ([])){3 marks}"#) -}
-5544eea6cbfa92d93d43fb9e76038b0b
+6834efb82b0e25d567f90d7d8ec16097
   lookupTests61 :: Test.Framework.Core.Test
   {- Unfolding: (Test.Framework.Core.Test
                    @ Test.Framework.Providers.HUnit.TestCaseRunning
@@ -2194,7 +2194,7 @@ dc14e63a34597211e451a7fc3886cf4d
                    (Trans
                         (Sym (GHC.Types.NTCo:IO[0] <()>_R))
                         (Sym (Test.Framework.Providers.HUnit.NTCo:TestCase[0])))) -}
-e5133651bffad551829c32e64035ed13
+17cf264fffb72d1d026684386eb67a14
   lookupTests62 ::
     GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
@@ -2210,7 +2210,7 @@ e5133651bffad551829c32e64035ed13
                    Main.$s$fShowMaybe
                    (GHC.Types.[] @ GHC.Types.Char)
                    Main.lookupTests63
-                   (Ex02.lkp1 @ GHC.Integer.Type.Integer @ GHC.Base.Maybe)
+                   Main.lookupTests63
                    eta2) -}
 2ae9b5fe4e25d348893f03c66be06742
   lookupTests63 :: GHC.Base.Maybe GHC.Integer.Type.Integer
@@ -2249,7 +2249,7 @@ a20ab2de47b59545e2907c4439b8ab85
 f04c9d958674c4244cd244ba7ea1eedd
   lookupTests69 :: GHC.Types.Int
   {- HasNoCafRefs, Unfolding: (GHC.Types.I# 78) -}
-3caa880b50b83417027b9fb12c99e659
+89a3187dcfce013d595a3b932be718e4
   lookupTests7 :: [Test.Framework.Core.Test]
   {- Strictness: m2,
      Unfolding: (GHC.Types.:
@@ -2260,7 +2260,7 @@ f04c9d958674c4244cd244ba7ea1eedd
   lookupTests70 :: [GHC.Types.Char]
   {- Unfolding: (GHC.CString.unpackCString#
                    "7 in A (B 3 300) (B 7 700) 5 500 (Maybe)){3 marks}"#) -}
-71082c8925bb6bf397f9f6cf6fd1f15a
+2446a84e19dbb76c56857b8ec9252dec
   lookupTests71 :: Test.Framework.Core.Test
   {- Unfolding: (Test.Framework.Core.Test
                    @ Test.Framework.Providers.HUnit.TestCaseRunning
@@ -2277,7 +2277,7 @@ f04c9d958674c4244cd244ba7ea1eedd
                    (Trans
                         (Sym (GHC.Types.NTCo:IO[0] <()>_R))
                         (Sym (Test.Framework.Providers.HUnit.NTCo:TestCase[0])))) -}
-5107d55bf3c0a2609bb860d2917cfde6
+a8d79cd5eba2dd00e1fd6b8d03513489
   lookupTests72 ::
     GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
@@ -2293,7 +2293,7 @@ f04c9d958674c4244cd244ba7ea1eedd
                    Main.$s$fShow[]
                    (GHC.Types.[] @ GHC.Types.Char)
                    Main.lookupTests73
-                   (Ex02.lkp1 @ GHC.Integer.Type.Integer @ [])
+                   Main.lookupTests73
                    eta2) -}
 d19985f7fbf0803b7536a66610e1957f
   lookupTests73 :: [GHC.Integer.Type.Integer]
@@ -2333,7 +2333,7 @@ d19985f7fbf0803b7536a66610e1957f
 05638dbb4cf2f8a547c8642b9f4f58d6
   lookupTests79 :: GHC.Types.Int
   {- HasNoCafRefs, Unfolding: (GHC.Types.I# 76) -}
-4c5f0fe626c29d00257742e479968b1d
+a4d88ed22bb9de98f6654c8120b30ea3
   lookupTests8 :: [Test.Framework.Core.Test]
   {- Strictness: m2,
      Unfolding: (GHC.Types.:
@@ -2344,7 +2344,7 @@ d19985f7fbf0803b7536a66610e1957f
   lookupTests80 :: [GHC.Types.Char]
   {- Unfolding: (GHC.CString.unpackCString#
                    "3 in A (B 3 300) (B 7 700) 5 500 ([])){4 marks}"#) -}
-f1fa40d415d51c59ddb5ae969f937d4a
+e3a194a1f27005876167f806f54cf9a6
   lookupTests81 :: Test.Framework.Core.Test
   {- Unfolding: (Test.Framework.Core.Test
                    @ Test.Framework.Providers.HUnit.TestCaseRunning
@@ -2361,7 +2361,7 @@ f1fa40d415d51c59ddb5ae969f937d4a
                    (Trans
                         (Sym (GHC.Types.NTCo:IO[0] <()>_R))
                         (Sym (Test.Framework.Providers.HUnit.NTCo:TestCase[0])))) -}
-dba908fb74ab099f188f43b0dab40902
+9faa808f8a615c9230ca61f3939dce93
   lookupTests82 ::
     GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
@@ -2377,7 +2377,7 @@ dba908fb74ab099f188f43b0dab40902
                    Main.$s$fShow[]
                    (GHC.Types.[] @ GHC.Types.Char)
                    Main.lookupTests73
-                   (Ex02.lkp1 @ GHC.Integer.Type.Integer @ [])
+                   Main.lookupTests73
                    eta2) -}
 31a37d33e8ff74af681f62ccd7760e24
   lookupTests83 :: GHC.Stack.CallStack
@@ -2413,7 +2413,7 @@ ed5c053dde40f466ff317f22ac03ea0e
 4e2e6b781208e6206c7d33151445f057
   lookupTests89 :: GHC.Types.Int
   {- HasNoCafRefs, Unfolding: (GHC.Types.I# 74) -}
-79b68b9f316fd9b270ad84840b7f4a9c
+d48b087c243379b044beda663ddee5bb
   lookupTests9 :: [Test.Framework.Core.Test]
   {- Strictness: m2,
      Unfolding: (GHC.Types.:
@@ -2424,7 +2424,7 @@ aea5aeb576e24f9fed47e0c3bfac19cd
   lookupTests90 :: [GHC.Types.Char]
   {- Unfolding: (GHC.CString.unpackCString#
                    "3 in B 3 300 ([])){3 marks}"#) -}
-da21efe92280575e66ac0842f074f81e
+e8dbf961ab5c2f391ead5d6d200a083f
   lookupTests91 :: Test.Framework.Core.Test
   {- Unfolding: (Test.Framework.Core.Test
                    @ Test.Framework.Providers.HUnit.TestCaseRunning
@@ -2441,7 +2441,7 @@ da21efe92280575e66ac0842f074f81e
                    (Trans
                         (Sym (GHC.Types.NTCo:IO[0] <()>_R))
                         (Sym (Test.Framework.Providers.HUnit.NTCo:TestCase[0])))) -}
-cfa2e27d589eab3405737d7c85d8980a
+f1a4a084758ac425ffacd21e3d08f249
   lookupTests92 ::
     GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
@@ -2457,7 +2457,7 @@ cfa2e27d589eab3405737d7c85d8980a
                    Main.$s$fShowMaybe
                    (GHC.Types.[] @ GHC.Types.Char)
                    Main.lookupTests93
-                   (Ex02.lkp1 @ GHC.Integer.Type.Integer @ GHC.Base.Maybe)
+                   Main.lookupTests93
                    eta2) -}
 8b9e38118f0922824473a8d480712e8c
   lookupTests93 :: GHC.Base.Maybe GHC.Integer.Type.Integer
@@ -2496,12 +2496,12 @@ e20232bb272124d0ef2892ab106481fb
 417c0dae41aa530e7924921bae569973
   lookupTests99 :: GHC.Types.Int
   {- HasNoCafRefs, Unfolding: (GHC.Types.I# 72) -}
-78f7647401bff7d166ee0f6b50a32d56
+cab5a873b06cd6194e94c65366699ee6
   main :: GHC.Types.IO ()
   {- Arity: 1, Strictness: <L,U>,
      Unfolding: InlineRule (0, True, True)
                 Main.main1 `cast` (Sym (GHC.Types.NTCo:IO[0] <()>_R)) -}
-c298a0c54b976df46aa9ba80b2c2ac03
+6790ecaea9a414970fb08fc126afe888
   main1 ::
     GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
@@ -2526,7 +2526,7 @@ c298a0c54b976df46aa9ba80b2c2ac03
                    ww7
                    ww8
                    ipv4 } } } }) -}
-8900b33ace4e98695c1c42fbb67aae30
+0e75c3fe45ab5a41100895938dc65301
   main2 ::
     GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
@@ -3950,27 +3950,27 @@ bc59911026f5e43a009748132612f118
 67fcc3cfdd648326f92cacf857e0128f
   statsTests99 :: GHC.Types.Int
   {- HasNoCafRefs, Unfolding: (GHC.Types.I# 48) -}
-3c9529c303d5100da45347a39b00de97
+56c8ab63921c920a6176311354d82951
   tests :: [Test.Framework.Core.Test]
   {- Strictness: m2,
      Unfolding: (GHC.Types.:
                    @ Test.Framework.Core.Test
                    Main.tests1
                    (GHC.Types.[] @ Test.Framework.Core.Test)) -}
-47a03ccd6c4d96ba3be554ec817fc03f
+94fc4f39badd7c132f143d5b6fa9f735
   tests1 :: Test.Framework.Core.Test
   {- Strictness: m2,
      Unfolding: (Test.Framework.Core.TestGroup
                    Main.tests5
                    Main.tests2) -}
-17208af38b60cbfd287cbf62b4942625
+f36687783793ae656ad5fb186e22e459
   tests2 :: [Test.Framework.Core.Test]
   {- Strictness: m2,
      Unfolding: (GHC.Types.:
                    @ Test.Framework.Core.Test
                    Main.insertTests
                    Main.tests3) -}
-ee474fbf36b85eeb5b0825c8afd0eea7
+cc3b8df67ff6ee9117580c5a805cca18
   tests3 :: [Test.Framework.Core.Test]
   {- Strictness: m2,
      Unfolding: (GHC.Types.:

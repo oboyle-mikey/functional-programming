@@ -55,17 +55,17 @@ ins k d (A (B k1 d1) (B k2 d2) ka da)
 -- Implement:
 lkp :: (Monad m, Ord k) => T k d -> k -> m d
 
-lkp C k =
+lkp C k  = fail "Error"
 
-lkp (B k d) kl
- | kl == k   =
- | otherwise =
+lkp (B k d) ks
+ | k == ks = return d
+ | otherwise = fail "Error"
 
-lkp (A (B k1 d1) (B k2 d2) ka da) kl
- | kl == k1 =
- | kl == k2 =
- | kl == ka =
- | otherwise
+lkp (A (B k1 d1) (B k2 d2) ka da) ks
+ | ks == k1 = return d1
+ | ks == k2 = return d2
+ | ks == ka = return da
+ | otherwise = fail "error"
 
 
 

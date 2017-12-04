@@ -1,10 +1,10 @@
 
 ==================== FINAL INTERFACE ====================
-2017-11-28 14:30:19.613584 UTC
+2017-12-04 15:05:23.041595 UTC
 
 interface main@main:Ex02 7103
-  interface hash: c08288a4c3e23823fdf1c3039743240e
-  ABI hash: 73be4e039ebaad896cb810c9474bbdc2
+  interface hash: 09924b923511f840e73bb2a6ef70bef3
+  ABI hash: 3e4c58923e9a465b95a9f8dca7a821ed
   export-list hash: c4c1c7cc812fc46fbc993ef083d2484b
   orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
   flag hash: e8fe081b83d39ff29d190674eed4c4bb
@@ -166,21 +166,56 @@ b6e21bbd5995cfca9823cd0e3e7f2fe7
   ins :: GHC.Classes.Ord k => k -> d -> Ex02.T k d -> Ex02.T k d
   {- Arity: 4,
      Strictness: <L,U(U(C(C1(U)),A),A,C(C1(U)),A,C(C1(U)),A,A,A)><L,U><L,U><S,1*U> -}
-57e5d90f07070fb6b543c8469607ff9a
+8b7ab5c654d59093569a485af04e49d5
   lkp ::
     (GHC.Base.Monad m, GHC.Classes.Ord k) => Ex02.T k d -> k -> m d
-  {- Arity: 4, Strictness: <B,A><B,A><B,A><B,A>b,
-     Unfolding: InlineRule (4, True, True)
-                (\ @ k
+  {- Arity: 4,
+     Strictness: <S,1*U(A,A,A,1*C1(U),1*C1(U))><L,1*U(1*U(U,U),A,A,A,A,A,A,A)><S,1*U><L,U>,
+     Unfolding: (\ @ k
                    @ d
                    @ (m :: * -> *)
                    $dMonad :: GHC.Base.Monad m
                    $dOrd :: GHC.Classes.Ord k
-                   ds :: Ex02.T k d
-                   ds1 :: k ->
-                 Ex02.lkp1 @ d @ m) -}
-1ee58b811d048caba55fa692ae74740c
-  lkp1 :: m d
+                   eta :: Ex02.T k d
+                   eta1 :: k ->
+                 case eta of wild {
+                   Ex02.A ds ds1 ka da
+                   -> case ds of wild1 {
+                        DEFAULT -> Ex02.lkp3 @ d @ m
+                        Ex02.B k1 d1
+                        -> case ds1 of wild2 {
+                             DEFAULT -> Ex02.lkp3 @ d @ m
+                             Ex02.B k2 d2
+                             -> let {
+                                  $dEq :: GHC.Classes.Eq k = GHC.Classes.$p1Ord @ k $dOrd
+                                } in
+                                case GHC.Classes.== @ k $dEq eta1 k1 of wild3 {
+                                  GHC.Types.False
+                                  -> case GHC.Classes.== @ k $dEq eta1 k2 of wild4 {
+                                       GHC.Types.False
+                                       -> case GHC.Classes.== @ k $dEq eta1 ka of wild5 {
+                                            GHC.Types.False
+                                            -> GHC.Base.fail @ m $dMonad @ d Ex02.lkp2
+                                            GHC.Types.True -> GHC.Base.return @ m $dMonad @ d da }
+                                       GHC.Types.True -> GHC.Base.return @ m $dMonad @ d d2 }
+                                  GHC.Types.True -> GHC.Base.return @ m $dMonad @ d d1 } } }
+                   Ex02.B k1 d1
+                   -> case GHC.Classes.==
+                             @ k
+                             (GHC.Classes.$p1Ord @ k $dOrd)
+                             k1
+                             eta1 of wild1 {
+                        GHC.Types.False -> GHC.Base.fail @ m $dMonad @ d Ex02.lkp1
+                        GHC.Types.True -> GHC.Base.return @ m $dMonad @ d d1 }
+                   Ex02.C -> GHC.Base.fail @ m $dMonad @ d Ex02.lkp1 }) -}
+808d4be8d5d2e21a306d2964db012563
+  lkp1 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "Error"#) -}
+4432f797a5a642829ba7a4b6d031e277
+  lkp2 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "error"#) -}
+8511ecc30f6e766e5426dab860890378
+  lkp3 :: m d
   {- Strictness: b -}
 55335250c28b0d8bab3a6877caf0ed1b
   twobirdsonestone ::
